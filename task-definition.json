@@ -23,6 +23,24 @@
       "image": "okikawaru",
       "essential": true,
       "name": "rails"
+    },
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "/ecs/happy-box-rails-task",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "command": ["rails", "db:migrate"],
+      "memory": null,
+      "memoryReservation": 50,
+      "volumesFrom": [],
+      "image": "okikawaru",
+      "essential": false,
+      "name": "rails-migrate"
     }
   ],
   "memory": null,

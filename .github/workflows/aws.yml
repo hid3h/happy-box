@@ -85,11 +85,19 @@ jobs:
         task-definition: task-definition.json
         container-name: rails
         image: ${{ steps.build-image.outputs.image }}
+    
+    - name: Fill in the new image ID in the Amazon ECS task definition-2
+      id: task-def-2
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        container-name: rails-migrate
+        image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        task-definition: ${{ steps.task-def-2.outputs.task-definition }}
         service: happy-box-rails-service
         cluster: seriko
         wait-for-service-stability: true
