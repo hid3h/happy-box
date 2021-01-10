@@ -9,8 +9,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^5.0.1",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "style-loader": "^2.0.0",
     "webpack": "^5.12.2",
     "webpack-cli": "^4.3.1",
     "webpack-manifest-plugin": "^3.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "tailwindcss": "^2.0.2"
   }
 }
