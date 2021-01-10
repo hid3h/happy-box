@@ -61,6 +61,11 @@ jobs:
         npm i
         npm run build:prod
 
+    - name: Create Rails .env file
+      run: |
+        echo "TWITTER_API_KEY=${{ secrets.TWITTER_API_KEY }}" > .env
+        echo "TWITTER_API_SECRET=${{ secrets.TWITTER_API_SECRET }}" >> .env
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
