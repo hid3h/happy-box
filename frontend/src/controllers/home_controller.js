@@ -39,15 +39,14 @@ export default class extends Controller {
         }]
       },
       options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true
-                  }
-              }]
-          }
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
       }
     });
-    console.log("Hello, Stimulus!", this.element)
   }
 }

@@ -4,7 +4,9 @@ class HomeController < ApplicationController
       1,
       10,
       4,
-      50
+      50,
+      3,
+      100
     ]
   end
 end
