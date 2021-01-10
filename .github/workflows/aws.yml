@@ -55,11 +55,11 @@ jobs:
     #   working-directory: frontend
     #   run: echo "REACT_APP_LIFF_ID=${{ secrets.REACT_APP_LIFF_ID }}" > .env
     
-    # - name: WebpackBuild
-    #   working-directory: frontend
-    #   run: |
-    #     npm i
-    #     npm run build:prod
+    - name: WebpackBuild
+      working-directory: frontend
+      run: |
+        npm i
+        npm run build:prod
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
