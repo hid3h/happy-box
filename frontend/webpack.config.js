@@ -7,6 +7,7 @@ module.exports = {
     filename: 'main-[contenthash].js',
     path: path.resolve(__dirname, '../public/packs'),
   },
+  devtool: "eval-source-map",
   plugins: [
     new WebpackManifestPlugin({
       publicPath: '/packs/'
@@ -14,6 +15,17 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+          }
+        }
+      },
       {
         test: /\.css$/i,
         use: [
