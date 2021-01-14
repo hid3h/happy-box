@@ -1,5 +1,7 @@
-class HomeController < ApplicationController
-  def index
+class UsersController < ApplicationController
+  skip_before_action :authenticate
+  
+  def show
     @happy_amounts = [
       1,
       10,
