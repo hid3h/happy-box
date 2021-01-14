@@ -3,6 +3,9 @@ class RetirementsController < ApplicationController
   end
 
   def create
-    p "cre"
+    if current_user.detroy
+      reset_session
+      redirect_to root_path, notice: "退会完了しました"
+    end
   end
 end

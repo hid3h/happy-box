@@ -12,6 +12,9 @@
 
 <body>
   <div class="container max-w-screen-sm m-o m-auto">
+    <% if flash.notice %>
+      <%= flash.notice %>
+    <% end %>
     <%= yield %>
   </div>
 </body>
