@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'top#index'
   get '/health', to: 'health#index'
   get '/auth/twitter/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   resource :retirements
   
