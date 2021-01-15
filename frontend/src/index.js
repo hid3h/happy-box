@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css"
+import './style.css'
 
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
