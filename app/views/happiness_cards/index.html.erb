@@ -1,0 +1,9 @@
+<% @happiness_cards.each do |happiness_card| %>
+  <p><%= happiness_card.message %></p>
+<% end %>
+
+<%= link_to "しあわせ貯金",
+  new_happiness_card_path,
+  type: "button",
+  class: "btn bg-pink-400"
+%>

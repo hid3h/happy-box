@@ -1,4 +1,8 @@
 class HappinessCardsController < ApplicationController
+  def index
+    @happiness_cards = current_user.happiness_cards.recently
+  end
+
   def new
     @happiness_card = HappinessCard.new
   end
@@ -8,7 +12,7 @@ class HappinessCardsController < ApplicationController
       user:    current_user,
       message: create_params[:message]
     )
-    redirect_to root_path
+    redirect_to happiness_cards_path
   rescue ActiveRecord::RecordInvalid => e
     p e.message
     @happiness_card = HappinessCard.new(create_params.to_h)
