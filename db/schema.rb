@@ -12,12 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_01_15_102140) do
 
-  create_table "happiness", charset: "utf8mb4", force: :cascade do |t|
+  create_table "happiness_cards", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "message"
+    t.text "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_happiness_on_user_id"
+    t.index ["user_id"], name: "index_happiness_cards_on_user_id"
   end
 
   create_table "social_auths", charset: "utf8mb4", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2021_01_15_102140) do
     t.index ["screen_name"], name: "index_users_on_screen_name", unique: true
   end
 
-  add_foreign_key "happiness", "users", on_delete: :cascade
+  add_foreign_key "happiness_cards", "users", on_delete: :cascade
   add_foreign_key "social_auths", "users", on_delete: :cascade
 end

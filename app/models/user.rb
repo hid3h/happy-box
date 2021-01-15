@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :social_auths
+  has_many :happiness_cards
 
   scope :auth_with_provider_and_uid, ->(provider, uid) { joins(:social_auths).merge(SocialAuth.wiht_provider_and_uid(provider, uid)) }
 
