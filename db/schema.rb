@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_12_115356) do
+ActiveRecord::Schema.define(version: 2021_01_15_102140) do
+
+  create_table "happiness", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_happiness_on_user_id"
+  end
 
   create_table "social_auths", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -34,5 +42,6 @@ ActiveRecord::Schema.define(version: 2021_01_12_115356) do
     t.index ["screen_name"], name: "index_users_on_screen_name", unique: true
   end
 
+  add_foreign_key "happiness", "users", on_delete: :cascade
   add_foreign_key "social_auths", "users", on_delete: :cascade
 end
