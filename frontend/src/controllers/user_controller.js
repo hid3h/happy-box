@@ -2,23 +2,31 @@ import { Controller } from "stimulus"
 import { Chart } from 'chart.js'
 
 export default class extends Controller {
-  static values = { graphData: Array }
+  static values = { graphData: Object }
 
   connect() {
-    console.log(this.graphDataValue)
+    // 二回走ってる。
+    console.count(this.graphDataValue)
+    this.setChart()
+  }
+  
+  setChart() {
     const ctx = document.getElementById('myChart').getContext('2d');
 
-    const axisCount = 6;
+    const axisCount = 12;
     const labels = [...Array(axisCount)].map((_, index) => {
       return `${index + 1}月`
     })
+
+    const data_array = Object.values(this.graphDataValue)
+
     new Chart(ctx, {
       type: 'bar',
       data: {
         labels: labels,
         datasets: [{
           // label: '# of Votes',
-          data: this.graphDataValue,
+          data: data_array,
           backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',

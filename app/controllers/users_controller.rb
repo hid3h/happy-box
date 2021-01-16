@@ -2,13 +2,8 @@ class UsersController < ApplicationController
   skip_before_action :authenticate
   
   def show
-    @happy_amounts = [
-      1,
-      10,
-      4,
-      50,
-      3,
-      100
-    ]
+    user = User.find_by!(screen_name: params[:screen_name])
+    @happiness_cards_count_by_month = HappinessCard.count_by_month(user: user)
+    @is_mypage = current_user == user
   end
 end
