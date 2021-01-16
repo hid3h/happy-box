@@ -59,7 +59,7 @@ jobs:
       working-directory: frontend
       run: |
         npm i
-        npm run build:prod
+        NODE_ENV=production npm run build:prod
 
     - name: Create Rails .env file
       run: |
