@@ -12,7 +12,7 @@ class HappinessCardsController < ApplicationController
       user:    current_user,
       message: create_params[:message]
     )
-    redirect_to happiness_cards_path
+    redirect_to root_path
   rescue ActiveRecord::RecordInvalid => e
     p e.message
     @happiness_card = HappinessCard.new(create_params.to_h)
