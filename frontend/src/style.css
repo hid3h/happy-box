@@ -5,3 +5,6 @@
 .bg-twitter {
   background-color:#1DA1F2;
 }
+
+/* リストの中のリンクをいっぱいに広げる */
+li a { display: block; }
