@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate
+  before_action :set_turbolinks_header
   helper_method :logged_in?, :current_user
 
   private
@@ -16,5 +17,11 @@ class ApplicationController < ActionController::Base
   def authenticate
     return if logged_in?
     redirect_to root_path, alert: "ログインしてください"
+  end
+
+  # https://nisshiee.hatenablog.jp/entry/2017/04/19/195253
+  # turbolinksnでリダイレクトした時にurlが変わらないのを解決
+  def set_turbolinks_header
+    response.set_header('Turbolinks-Location', request.fullpath)
   end
 end
