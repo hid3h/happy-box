@@ -53,7 +53,14 @@ export default class extends Controller {
         scales: {
           yAxes: [{
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
+              userCallback: function(label, index, labels) {
+                // https://hacknote.jp/archives/28022/
+                // 小数点を表示しない
+                if (Math.floor(label) === label) {
+                  return label;
+                }
+              }
             }
           }]
         }
