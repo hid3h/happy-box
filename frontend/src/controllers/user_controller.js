@@ -18,7 +18,7 @@ export default class extends Controller {
       return `${index + 1}月`
     })
 
-    const data_array = Object.values(this.graphDataValue)
+    const dataArray = Object.values(this.graphDataValue)
 
     new Chart(ctx, {
       type: 'bar',
@@ -26,7 +26,7 @@ export default class extends Controller {
         labels: labels,
         datasets: [{
           // label: '# of Votes',
-          data: data_array,
+          data: dataArray,
           backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
