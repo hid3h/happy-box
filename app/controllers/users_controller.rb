@@ -8,5 +8,7 @@ class UsersController < ApplicationController
     @happiness_cards_count_by_year  = HappinessCard.count_by_year(user: user)
     
     @is_mypage = current_user == user
+
+    @page_title = user.name + 'さんのしあわせグラフ'
   end
 end

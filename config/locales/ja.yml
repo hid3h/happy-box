@@ -1,6 +1,6 @@
 ja:
   site_title: "しあわせ貯金箱"
-  meta_description: "日々のちょっとしあわせを貯金して、振り返ったりグラフで確認したりすることのでできるサービスです"
+  meta_description: "日々のちょっとしあわせを貯金して、振り返ったりグラフで確認したりすることのできるサービスです"
   time:
     formats:
       default: "%Y/%m/%d"

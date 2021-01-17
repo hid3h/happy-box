@@ -58,3 +58,5 @@ gem 'omniauth-twitter'
 
 # paramsを引数に
 gem 'action_args'
+# meta-tagをページごとに設定したくなって
+gem 'meta-tags'
