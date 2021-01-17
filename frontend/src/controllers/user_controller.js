@@ -25,7 +25,7 @@ export default class extends Controller {
       data: {
         labels: labels,
         datasets: [{
-          label: '# of Votes', // グラフ上部のタイトル的なやつ.optionのlegend: falseで非表示
+          label: '', // グラフタップした時に表示される
           data: dataArray,
           backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
