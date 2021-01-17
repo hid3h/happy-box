@@ -8,10 +8,12 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
   <%= javascript_webpack_bundle_tag('main') %>
 </head>
 
-<body class="pb-16">
+<body class="pb-16 wf-roundedmplus1c ">
   <div class="container max-w-screen-sm m-o m-auto p-4">
     <% if flash.notice %>
       <%= flash.notice %>
