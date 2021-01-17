@@ -20,5 +20,9 @@ class HappinessCard < ApplicationRecord
       # TODO 今年にしぼる
       group("MONTH(created_at)").by_user(user).count
     end
+
+    def count_by_year(user:)
+      group("YEAR(created_at)").by_user(user).count
+    end
   end
 end

@@ -2,11 +2,11 @@
   data-controller="user"
   data-user-graph-data-value='<%= @happiness_cards_count_by_month.to_json.html_safe %>'
 >
-  <canvas id="myChart" width="400" height="400"></canvas>
+  <div class="text-center">
+    <%= @happiness_cards_count_by_year[Time.zone.now.year] %>
+  </div>
+  <canvas id="myChart" height="300"></canvas>
 
-  <p>上の部分は他人の分も見えていいかな</p>
-
-  <p>このボタンは自分のページ見てるとき</p>
   <% if @is_mypage %>
     <div class="text-center">
       <%= link_to "しあわせを記録する",
@@ -16,6 +16,6 @@
     </div>
   <% end %>
 
-  ログアウトは別の画面に持っていきたい
+  <p>ログアウトは別の画面に持っていきたい</p>
   <%= link_to "ログアウト", logout_path, method: :delete %>
 </div>
