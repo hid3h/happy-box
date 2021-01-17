@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+これをコピペして新しいサービスを作る時にやること
+TODO コメントのところを適したものに
+locales/ja.yml を適したものに

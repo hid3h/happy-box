@@ -32,6 +32,10 @@ module Myapp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.i18n.default_locale = :ja
+
+    # config.hosts << "fa57c0a88244.ngrok.io"
+
     config.time_zone = 'Tokyo'
 
     config.session_store :cookie_store, key: '_azk_session'
