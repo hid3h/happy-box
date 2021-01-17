@@ -4,6 +4,11 @@
 >
   <div class="text-center">
     2021年: <%= @happiness_cards_count_by_year[Time.zone.now.year] %>
+    <% if flash[:add] %>
+      <span class="text-white bg-pink-400 inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none rounded-full">
+        <%= flash[:add] %>
+      </span>
+    <% end %>
   </div>
   <canvas id="myChart" height="350px"></canvas>
 
