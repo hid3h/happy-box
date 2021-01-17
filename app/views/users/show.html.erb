@@ -5,17 +5,14 @@
   <div class="text-center">
     <%= @happiness_cards_count_by_year[Time.zone.now.year] %>
   </div>
-  <canvas id="myChart" height="300"></canvas>
+  <canvas id="myChart" height="400px"></canvas>
 
   <% if @is_mypage %>
-    <div class="text-center">
+    <div class="text-center my-12">
       <%= link_to "しあわせを記録する",
         new_happiness_card_path,
         class: "btn bg-pink-400"
       %>
     </div>
   <% end %>
-
-  <p>ログアウトは別の画面に持っていきたい</p>
-  <%= link_to "ログアウト", logout_path, method: :delete %>
 </div>
