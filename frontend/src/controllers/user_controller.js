@@ -4,10 +4,12 @@ import { Chart } from 'chart.js'
 export default class extends Controller {
   static values = { graphData: Object }
 
-  connect() {
+  initialize() {
     // 二回走ってる。
     console.count(this.graphDataValue)
-    this.setChart()
+    if (!document.documentElement.hasAttribute("data-turbolinks-preview")) {
+      this.setChart()
+    }
   }
   
   setChart() {
