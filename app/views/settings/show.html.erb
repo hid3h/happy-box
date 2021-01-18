@@ -1,1 +1,18 @@
-しょー
+<div class="py-5" data-controller="setting">
+  <div class="">
+    <label for="twitter_accout" class="font-medium text-gray-700">Twitter連携</label>
+    <p class="mt-1">
+      <%= link_to current_user.screen_name, twitter_profile_link(current_user.screen_name) %>で連携中
+    </p>
+  </div>
+  <div class="mt-10">
+    <p class="mt-1">
+      <%= link_to 'ログアウトする', logout_path %>
+    </p>
+  </div>
+  <div class="mt-10">
+    <p class="mt-1">
+      <%= link_to '退会する', logout_path %>
+    </p>
+  </div>
+</div>

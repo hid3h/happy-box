@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get '/auth/twitter/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resource :retirements
-  resource :setting
+  resource :retirements, only: [:new, :create]
+  resource :setting, only: [:show]
   resources :happiness_cards, only: [:new, :create, :show, :index]
   
   # see https://railsguides.jp/routing.html#%E5%90%8D%E5%89%8D%E4%BB%98%E3%81%8D%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0
