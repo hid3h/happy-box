@@ -1,13 +1,13 @@
-import { Controller } from "stimulus"
+import StimulusController from "./stimulus_controller"
 import { Chart } from 'chart.js'
 
-export default class extends Controller {
+export default class extends StimulusController {
   static values = { graphData: Object }
 
   initialize() {
     // 二回走ってる。
     console.count(this.graphDataValue)
-    if (!document.documentElement.hasAttribute("data-turbolinks-preview")) {
+    if (!document.documentElement.hasAttribute("data-turbo-preview")) {
       this.setChart()
     }
   }
