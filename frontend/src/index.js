@@ -3,8 +3,6 @@ import './style.css'
 
 import Rails from 'rails-ujs';
 Rails.start();
-const Turbolinks = require("turbolinks")
-Turbolinks.start()
 
 /** stimulus */
 import { Application } from "stimulus"
@@ -14,5 +12,7 @@ const application = Application.start()
 const context = require.context("./controllers", true, /\.js$/)
 application.load(definitionsFromContext(context))
 /** stimulus */
+
+import * as Turbo from "@hotwired/turbo"
 
 console.count('hello, wrold2')
