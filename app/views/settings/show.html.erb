@@ -1,6 +1,6 @@
-<div class="py-5" data-controller="setting">
+<div class="py-5 text-sm font-medium text-gray-500" data-controller="setting">
   <div class="">
-    <label for="twitter_accout" class="font-medium text-gray-700">Twitter連携</label>
+    <label for="twitter_accout" class="text-base text-gray-700">Twitter連携</label>
     <p class="mt-1">
       <%= link_to current_user.screen_name, twitter_profile_link(current_user.screen_name) %>で連携中
     </p>
@@ -12,7 +12,7 @@
   </div>
   <div class="mt-10">
     <p class="mt-1">
-      <%= link_to '退会', logout_path %>
+      <%= link_to '退会する', retirements_path, method: :post, remote: true, data: { confirm: "本当に退会しますか？データはすべて削除され元に戻すことはできません" } %>
     </p>
   </div>
 </div>
