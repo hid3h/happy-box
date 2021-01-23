@@ -9,8 +9,9 @@ module.exports = {
     filename: 'main-[contenthash].js',
     path: path.resolve(__dirname, '../public/packs'),
   },
-  devtool: "eval-source-map",
+  // devtool: "eval-source-map", これでbuildすると1.85MiBから297KiBに
   externals: {
+    // chartjsのサイズ減らす用
     moment: 'moment'
   },
   plugins: [

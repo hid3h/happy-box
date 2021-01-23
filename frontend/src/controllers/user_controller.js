@@ -1,5 +1,5 @@
 import StimulusController from "./stimulus_controller"
-import { Chart } from 'chart.js'
+import Chart from 'chart.js'
 
 export default class extends StimulusController {
   static values = { graphData: Object }
