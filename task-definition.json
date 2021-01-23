@@ -17,7 +17,7 @@
           "containerPort": 3000
         }
       ],
-      "memory": 500,
+      "memory": 300,
       "memoryReservation": null,
       "volumesFrom": [],
       "image": "okikawaru",
