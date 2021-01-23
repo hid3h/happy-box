@@ -21,9 +21,9 @@ module.exports = {
     new WebpackManifestPlugin({
       publicPath: '/packs/'
     }),
-    new StatsPlugin('stats.json', {
-      chunkModules: true,
-    })
+    // new StatsPlugin('stats.json', {
+    //   chunkModules: true,
+    // })
   ],
   module: {
     rules: [
