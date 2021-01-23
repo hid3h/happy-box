@@ -1,6 +1,6 @@
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const StatsPlugin = require('stats-webpack-plugin');
+// const StatsPlugin = require('stats-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
