@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "webpack --progress --watch --mode=development",
-    "build:prod": "webpack --mode=production"
+    "build:prod": "NODE_ENV=production webpack --mode=production"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "css-loader": "^5.0.1",
     "postcss": "^8.2.4",
     "postcss-loader": "^4.1.0",
+    "stats-webpack-plugin": "^0.7.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.12.2",
     "webpack-cli": "^4.3.1",

@@ -1,5 +1,7 @@
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const StatsPlugin = require('stats-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,9 +10,18 @@ module.exports = {
     path: path.resolve(__dirname, '../public/packs'),
   },
   devtool: "eval-source-map",
+  externals: {
+    moment: 'moment'
+  },
   plugins: [
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
     new WebpackManifestPlugin({
       publicPath: '/packs/'
+    }),
+    new StatsPlugin('stats.json', {
+      chunkModules: true,
     })
   ],
   module: {
