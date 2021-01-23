@@ -2,6 +2,11 @@
   data-controller="user"
   data-user-graph-data-value='<%= @happiness_cards_count_by_month.to_json.html_safe %>'
 >
+  <% if !@is_mypage %>
+    <h1 class="text-center my-4 text-gray-900">
+      <%= @user.name %>さんのしあわせ貯金
+    </h1>
+  <% end %>
   <div class="text-center">
     2021年: <%= @happiness_cards_count_by_year[Time.zone.now.year] %>
     <% if flash[:add] %>
@@ -19,5 +24,9 @@
         class: "btn bg-pink-400"
       %>
     </div>
+  <% end %>
+  <% if !@is_mypage %>
+    <p class="my-4">あなたも日々のしあわせを記録していきませんか？</p>
+    <%= render 'shared/twitter_login_button' %>
   <% end %>
 </div>

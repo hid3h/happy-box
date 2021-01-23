@@ -13,7 +13,7 @@
   <%= javascript_webpack_bundle_tag('main') %>
 </head>
 
-<body class="pb-16 wf-roundedmplus1c bg-gray-50">
+<body class="<% if logged_in? %>pb-16<% end %> wf-roundedmplus1c bg-gray-50">
   <div class="container max-w-screen-sm m-o m-auto p-4 bg-white">
     <% if flash.notice %>
       <%= flash.notice %>
