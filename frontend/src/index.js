@@ -14,5 +14,3 @@ application.load(definitionsFromContext(context))
 /** stimulus */
 
 import * as Turbo from "@hotwired/turbo"
-
-console.count('hello, wrold2')

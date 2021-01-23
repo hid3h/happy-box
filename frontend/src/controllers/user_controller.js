@@ -6,7 +6,6 @@ export default class extends StimulusController {
 
   initialize() {
     // 二回走ってる。
-    console.count(this.graphDataValue)
     if (!document.documentElement.hasAttribute("data-turbo-preview")) {
       this.setChart()
     }
