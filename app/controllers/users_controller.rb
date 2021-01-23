@@ -10,6 +10,11 @@ class UsersController < ApplicationController
     
     @is_mypage = current_user == @user
 
-    @page_title = @user.name + 'さんのしあわせグラフ'
+    @page_title = @user.name + 'さんのしあわせ貯金箱'
+
+    return if flash[:twitter_share].blank?
+  
+    @twitter_share_text = "しあわせ貯金に追加しました%0a%0a#{@page_title}%0a#{user_url(@user.screen_name)}%0a%0a"
+    @twitter_hashtags   = t("twitter_hashtag")
   end
 end

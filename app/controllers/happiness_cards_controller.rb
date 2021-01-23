@@ -12,7 +12,7 @@ class HappinessCardsController < ApplicationController
       user:    current_user,
       message: create_params[:message]
     )
-    redirect_to user_path(current_user.screen_name), flash: { add: "+1" }
+    redirect_to user_path(current_user.screen_name), flash: { add: "+1", twitter_share: true }
   rescue ActiveRecord::RecordInvalid => e
     p e.message
     @happiness_card = HappinessCard.new(create_params.to_h)

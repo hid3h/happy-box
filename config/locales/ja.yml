@@ -1,6 +1,7 @@
 ja:
   site_title: "しあわせ貯金箱"
   meta_description: "日々のちょっとしあわせを貯金して、振り返ったりグラフで確認したりすることのできるサービスです"
+  twitter_hashtag: "しあわせ貯金箱"
   time:
     formats:
       default: "%Y/%m/%d"
