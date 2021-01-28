@@ -53,6 +53,9 @@ export default class extends StimulusController {
         },
         scales: {
           yAxes: [{
+            gridLines: {
+              display: false
+            },
             ticks: {
               beginAtZero: true,
               userCallback: function(label, index, labels) {

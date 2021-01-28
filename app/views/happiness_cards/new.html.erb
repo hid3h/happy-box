@@ -1,19 +1,14 @@
-<%= form_with model: @happiness_card do |f| %>
-  <div>
-    <%= f.text_area :message, class:
-      '
-      p-3
-      w-full
-      border
-      border-gray-300
-      rounded-md
-      ',
-      maxlength: "100",
-      rows: 5 # mash
-    %>
-  </div>
+<div class="mt-4">
+  <%= form_with model: @happiness_card do |f| %>
+    <div>
+      <%= f.text_area :message, class: "card w-full",
+        maxlength: "100",
+        rows: 5 # mash
+      %>
+    </div>
 
-  <div class='text-center'>
-    <%= f.button "記録する", type: "submit", class: "btn bg-pink-400", data: { "disable-with": "記録しています..." } %>
-  </div>
-<% end %>
+    <div class='text-center mt-4'>
+      <%= f.button "記録する", type: "submit", class: "btn bg-pink-400", data: { "disable-with": "記録しています..." } %>
+    </div>
+  <% end %>
+</div>

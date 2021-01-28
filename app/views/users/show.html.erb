@@ -1,9 +1,10 @@
 <div
+  class = "rounded-lg mt-4"
   data-controller="user"
   data-user-graph-data-value='<%= @happiness_cards_count_by_month.to_json.html_safe %>'
 >
   <% if !@is_mypage %>
-    <h1 class="text-center my-4 text-gray-900">
+    <h1 class="text-center mt-4 text-gray-900">
       <%= @user.name %>さんのしあわせ貯金
     </h1>
   <% end %>
@@ -25,7 +26,7 @@
   <% end %>
 
   <% if @is_mypage %>
-    <div class="text-center my-12">
+    <div class="text-center mt-12">
       <%= link_to "しあわせを記録する",
         new_happiness_card_path,
         class: "btn bg-pink-400"

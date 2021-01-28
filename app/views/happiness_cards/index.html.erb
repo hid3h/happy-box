@@ -1,20 +1,14 @@
-<div class="text-center my-6">
-  <%= link_to "しあわせを記録する",
-    new_happiness_card_path,
-    class: "btn bg-pink-400"
-  %>
-</div>
-<% @happiness_cards.each do |happiness_card| %>
-  <div class="
-    shadow
-    w-full
-    my-4
-    p-3
-    rounded-md
-    border
-    border-gray-300
-  ">
-    <p><%= hbr(happiness_card.message) %></p>
-    <p class="mt-4 text-sm text-gray-500"><%= l(happiness_card.created_at) %>
+<div class="mt-4">
+  <div class="text-center">
+    <%= link_to "しあわせを記録する",
+      new_happiness_card_path,
+      class: "btn bg-pink-400"
+    %>
   </div>
-<% end %>
+  <% @happiness_cards.each do |happiness_card| %>
+    <div class="card mt-4">
+      <p class="text-sm text-gray-500"><%= l(happiness_card.created_at) %>
+      <p class="mt-4"><%= hbr(happiness_card.message) %></p>
+    </div>
+  <% end %>
+</div>
