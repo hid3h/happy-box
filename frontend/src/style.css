@@ -5,7 +5,7 @@
 }
 
 .card {
-  @apply shadow p-4 rounded-lg border border-gray-200 bg-white break-words
+  @apply shadow p-4 rounded-lg bg-white break-words
 }
 
 .bg-twitter {
