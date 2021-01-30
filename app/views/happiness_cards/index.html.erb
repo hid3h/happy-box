@@ -1,4 +1,4 @@
-<div class="mt-4">
+<div class="mt-4" data-controller="happiness-card">
   <div class="text-center">
     <%= link_to "しあわせを記録する",
       new_happiness_card_path,
@@ -6,9 +6,9 @@
     %>
   </div>
   <% @happiness_cards.each do |happiness_card| %>
-    <div class="card mt-4">
+    <div class="card mt-4" data-action="click->happiness-card#swithCardBodyVisible">
       <p class="text-sm text-gray-500"><%= l(happiness_card.created_at) %>
-      <p class="mt-4"><%= hbr(happiness_card.message) %></p>
+      <p class="mt-4 invisible" data-card-body><%= hbr(happiness_card.message) %></p>
     </div>
   <% end %>
 </div>
