@@ -14,3 +14,7 @@
 
 /* リストの中のリンクをいっぱいに広げる */
 li a { display: block; }
+
+.transform-center {
+  transform: translate(-50%, -50%);
+}

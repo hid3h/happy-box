@@ -10,5 +10,9 @@ export default class extends StimulusController {
     } else {
       cardBodyEl.classList.add("invisible")
     }
+
+    const cardTapEl = event.currentTarget.querySelector('[data-card-tap]')
+    if (!cardTapEl) return
+    cardTapEl.classList.add("invisible")
   }
 }
