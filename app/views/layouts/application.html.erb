@@ -22,7 +22,7 @@
   <%= javascript_webpack_bundle_tag('main') %>
 </head>
 
-<body class="<% if logged_in? %>pb-16<% end %> wf-roundedmplus1c bg-green-50">
+<body class="wf-roundedmplus1c bg-green-50">
   <% if flash.notice %>
     <p class="m-4 text-sm text-gray-500"><%= flash.notice %></p>
   <% end %>
@@ -34,6 +34,7 @@
   </div>
 
   <% if logged_in? %>
+    <div class="h-24"></div>
     <div class="w-full fixed bottom-0 bg-green-50">
       <ul class="flex w-full py-3">
         <li class="w-full text-center">
