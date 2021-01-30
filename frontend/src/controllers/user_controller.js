@@ -14,7 +14,7 @@ export default class extends StimulusController {
   setChart() {
     const ctx = document.getElementById('myChart').getContext('2d');
 
-    const axisCount = 12;
+    const axisCount = 6;
     const labels = [...Array(axisCount)].map((_, index) => {
       return `${index + 1}月`
     })
@@ -52,10 +52,12 @@ export default class extends StimulusController {
           display: false
         },
         scales: {
-          yAxes: [{
+          xAxes: [{
             gridLines: {
               display: false
             },
+          }],
+          yAxes: [{
             ticks: {
               beginAtZero: true,
               userCallback: function(label, index, labels) {
