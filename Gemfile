@@ -60,3 +60,6 @@ gem 'omniauth-twitter'
 gem 'action_args'
 # meta-tagをページごとに設定したくなって
 gem 'meta-tags'
+
+# viewテンプレート
+gem 'slim'
