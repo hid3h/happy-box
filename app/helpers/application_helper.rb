@@ -6,4 +6,8 @@ module ApplicationHelper
   def twitter_profile_link(screen_name)
     "https://twitter.com/#{screen_name}"
   end
+
+  def footer_enabled?
+    !!@footer_enabled
+  end
 end

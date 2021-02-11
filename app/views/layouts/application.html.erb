@@ -33,6 +33,10 @@
     </div>
   </div>
 
+  <% if footer_enabled? %>
+    <%= render 'shared/footer' %>
+  <% end %>
+
   <% if logged_in? %>
     <div class="h-24"></div>
     <div class="w-full fixed bottom-0 bg-green-50">
