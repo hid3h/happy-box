@@ -12,6 +12,10 @@
   @apply text-sm text-gray-500
 }
 
+.white-border {
+  @apply border-white border-8 border-solid rounded-lg shadow-xl
+}
+
 .bg-twitter {
   background-color:#1DA1F2;
 }
