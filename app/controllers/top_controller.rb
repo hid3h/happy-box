@@ -4,6 +4,6 @@ class TopController < ApplicationController
   def index
     redirect_to user_path(current_user.screen_name) if logged_in?
 
-    @footer_enabled = false
+    @footer_enabled = true
   end
 end

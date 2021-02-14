@@ -8,6 +8,10 @@
   @apply shadow p-4 rounded-lg bg-white break-words
 }
 
+.gray-link {
+  @apply text-sm text-gray-500
+}
+
 .bg-twitter {
   background-color:#1DA1F2;
 }
